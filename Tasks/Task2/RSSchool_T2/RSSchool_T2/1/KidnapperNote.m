@@ -2,7 +2,7 @@
 
 @implementation KidnapperNote
 -(BOOL)checkMagazine:(NSString *)magazine note:(NSString *)note {
-    NSMutableArray *magazineNotes = [[[magazine lowercaseString] componentsSeparatedByString:@" "] mutableCopy];
+    NSMutableArray *magazineNotes = [[[[magazine lowercaseString] componentsSeparatedByString:@" "] mutableCopy] autorelease];
     NSArray *notes = [[note lowercaseString] componentsSeparatedByString:@" "];
     
     for (NSString *noteWord in notes) {
@@ -18,7 +18,6 @@
             return NO;
         }
     }
-    
     return YES;
 }
 @end

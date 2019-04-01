@@ -2,39 +2,38 @@
 
 @implementation RomanTranslator
 
--(NSString *)romanFromArabic:(NSString *)arabicString { //1994 - 1000 - 900 - 90 - 4
-    NSDictionary *romanArabicSymbols = @{
-                                         @"I" : @1,
-                                         @"V" : @5,
-                                         @"X" : @10,
-                                         @"L" : @50,
-                                         @"C" : @100,
-                                         @"D" : @500,
-                                         @"M" : @1000
-                                         };
+-(NSString *)romanFromArabic:(NSString *)arabicString {
+    NSArray *arabicValues = @[@1, @5, @10, @50, @100, @500, @1000];
+    NSArray *romeSymbols = @[@"I", @"V", @"X", @"L", @"C", @"D", @"M"];
     NSInteger arabicNumber = [arabicString integerValue];
-    NSMutableString *romanString = [@"" mutableCopy];
+    NSMutableString *romanString = [[@"" mutableCopy] autorelease];
+    NSInteger index = [arabicValues count] - 1;
+    BOOL decade = YES;
     while (arabicNumber > 0) {
-        for (NSString *symbol in romanArabicSymbols) {
-            NSInteger subtrahend = [[romanArabicSymbols valueForKey:symbol] integerValue];
-            if ((arabicNumber - subtrahend >= -subtrahend / 10 - 1) && (arabicNumber - subtrahend <= subtrahend)){ //4 - 5 = -1
-                NSArray *allNumbers = [romanArabicSymbols allValues];
-                NSInteger previousIndex = [allNumbers indexOfObject:[NSString stringWithFormat:@"%ld", subtrahend]];
-                NSInteger previousNumber = [[allNumbers objectAtIndex: previousIndex] integerValue];
-                NSString *previousSymbol = [[romanArabicSymbols allKeysForObject:[NSString stringWithFormat:@"%ld", previousIndex]] firstObject];
-                [romanString appendString:previousSymbol];
-                [romanString appendString:symbol];
-                arabicNumber -= subtrahend - previousNumber;
-                break;
-            } else if ((arabicNumber - subtrahend >= 0) && (arabicNumber - subtrahend <= subtrahend / 2)) {
-                [romanString appendString:symbol];
-                arabicNumber -= subtrahend;
-                break;
+        double quantity = (double)arabicNumber / (double)[arabicValues[index] integerValue];
+        if (decade) {
+            if ((quantity >= 4) && (quantity < 5)) {
+                NSString *pair = [NSString stringWithFormat:@"%@%@", romeSymbols[index], romeSymbols[index + 1]];
+                [romanString appendString:pair];
+            } else if ((quantity >= 1) && (quantity < 4)) {
+                for (NSInteger times = 1; times <= quantity; times++) {
+                    [romanString appendString:romeSymbols[index]];
+                }
+            }
+            arabicNumber = arabicNumber % [arabicValues[index] integerValue];
+        } else {
+            if ((quantity >= 1.8) && (quantity <= 2)) {
+                NSString *pair = [NSString stringWithFormat:@"%@%@", romeSymbols[index - 1], romeSymbols[index + 1]];
+                [romanString appendString:pair];
+                arabicNumber = arabicNumber % ([arabicValues[index - 1] integerValue] + 4 * [arabicValues[index + 1] integerValue]);
+            } else if (quantity >= 1) {
+                [romanString appendString:romeSymbols[index]];
+                arabicNumber = arabicNumber % [arabicValues[index] integerValue];
             }
         }
+        decade = !decade;
+        index--;
     }
-    
-    
     return romanString;
 }
 

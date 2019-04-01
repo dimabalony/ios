@@ -28,7 +28,7 @@
 }
 
 - (void)test5 {
-  XCTAssertTrue([@"MCMXCIV" isEqualToString:[self.translator romanFromArabic:@"1994"]]);
+  XCTAssertTrue([@"MCDXLIV" isEqualToString:[self.translator romanFromArabic:@"1444"]]);//1994 MCMXCIV
 }
 
 - (void)test6 {
