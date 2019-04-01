@@ -24,7 +24,7 @@
 }
 
 - (void)test4 {
-  XCTAssertTrue([@"LVIII" isEqualToString:[self.translator romanFromArabic:@"58"]]);
+  XCTAssertTrue([@"LVIII" isEqualToString:[self.translator romanFromArabic:@"58"]]); 
 }
 
 - (void)test5 {

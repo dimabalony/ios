@@ -2,4 +2,102 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSchool_T2/2/RomanTranslator.m"
+            timestampString = "575824601.600172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "-romanFromArabic:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslator romanFromArabic:]"
+                  moduleName = "RSSchool_T2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimabalony/Documents/Objective-C/The%20Rolling%20Scopes/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2/2/RomanTranslator.m"
+                  timestampString = "575768617.743425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "909">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslator romanFromArabic:]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimabalony/Documents/Objective-C/The%20Rolling%20Scopes/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2/2/RomanTranslator.m"
+                  timestampString = "575768619.465095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "909">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSchool_T2/2/RomanTranslator.m"
+            timestampString = "575824601.6233341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-romanFromArabic:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslator romanFromArabic:]"
+                  moduleName = "RSSchool_T2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimabalony/Documents/Objective-C/The%20Rolling%20Scopes/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2/2/RomanTranslator.m"
+                  timestampString = "575824601.886173"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "826">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslator romanFromArabic:]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimabalony/Documents/Objective-C/The%20Rolling%20Scopes/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2/2/RomanTranslator.m"
+                  timestampString = "575824610.947224"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "826">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
